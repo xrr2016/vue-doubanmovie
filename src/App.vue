@@ -1,22 +1,24 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div>
+    <app-header></app-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Header from './components/Header.vue'
+import Spinner from './components/Spinner.vue'
 
 export default {
   name: 'app',
   components: {
-    Hello
+    'app-header':Header,
+    'app-spinner':Spinner
   }
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
